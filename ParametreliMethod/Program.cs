@@ -6,6 +6,9 @@ namespace ParametreliMethod
     {
         static void Main(string[] args)
         {
+            topla();
+            topla(5, 6);
+            topla(5, 6, 7);
             yaz("merhaba dünya",6,8);
             yazdır("ali");
             Console.WriteLine("Üstü alınacak sayıyı girin:");
@@ -92,5 +95,26 @@ namespace ParametreliMethod
             Console.WriteLine("Dikdörtgenler prizmasının hacmi=" + (uzunkenar * kisakenar * yükseklik2));
         } 
         #endregion
+
+        static void topla() //Üç adet ayrı ayrı topla komutları yazılacak (metodlu yöntemle).
+        {
+            Console.WriteLine("1.sayıyı giriniz:");
+            float s1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("2.sayıyı giriniz:");
+            float s2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("3.sayıyı giriniz:");
+            float s3 = int.Parse(Console.ReadLine());
+            float sum = s1 + s1 + s3;
+            Console.WriteLine("Toplam:"+sum);
+        }
+        static void topla(int s1,int s2)
+        {
+            Console.WriteLine("Int sayıları toplamı:"+(s1+s2));
+        }
+
+        static void topla(double s1, int s2, short s3)
+        {
+            Console.WriteLine("Farklı türden sayıların toplamı:"+(s1+s2+s3));
+        }
     }
 }
